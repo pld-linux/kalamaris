@@ -7,41 +7,45 @@ Name:		kalamaris
 Version:	0.6.0
 Release:	1
 Group:		Applications/Math
+Group(de):	Applikationen/Mathematik
 Group(pl):	Aplikacje/Matematyczne
-Copyright:	GPL
+License:	GPL
 Source0:	http://www.arrakis.es/~rlarrosa/bin/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-unlink.patch
 Patch1:		%{name}-make.patch
-BuildRequires:	qt >= 2.2.0
-BuildRequires:  kdelibs >= 2.0
 URL:		http://www.arrakis.es/~rlarrosa/kalamaris.html
+BuildRequires:	qt >= 2.2.0
+BuildRequires:	kdelibs >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Kalamaris is the next generation scientific applications. While similar to
-Mathematica in some aspects, it offers a new approach to solve mathematical
-problems in an easy and intuitive way.
+Kalamaris is the next generation scientific applications. While
+similar to Mathematica in some aspects, it offers a new approach to
+solve mathematical problems in an easy and intuitive way.
 
 %description -l pl
-Kalamaris nale¿y do nowej generacji naukowych aplikacji. Podczas gdy jest
-podobny do Mathematica pod pewnymi wzglêdami - oferuje nowe mo¿liwo¶ci
-rozwi±zywania problemów matematycznych w ³atwy i intuicyjny sposób.
+Kalamaris nale¿y do nowej generacji naukowych aplikacji. Podczas gdy
+jest podobny do Mathematica pod pewnymi wzglêdami - oferuje nowe
+mo¿liwo¶ci rozwi±zywania problemów matematycznych w ³atwy i intuicyjny
+sposób.
 
 %package examples
 Summary:	Kalamaris - examples
 Summary(pl):	Kalamaris - przyklady
 Group:		Applications/Math
+Group(de):	Applikationen/Mathematik
 Group(pl):	Aplikacje/Matematyczne
 
 %description examples
-Kalamaris is the next generation scientific applications. While similar to
-Mathematica in some aspects, it offers a new approach to solve mathematical
-problems in an easy and intuitive way.
+Kalamaris is the next generation scientific applications. While
+similar to Mathematica in some aspects, it offers a new approach to
+solve mathematical problems in an easy and intuitive way.
 
 %description examples -l pl
-Kalamaris nale¿y do nowej generacji naukowych aplikacji. Podczas gdy jest
-podobny do Mathematica pod pewnymi wzglêdami - oferuje nowe mo¿liwo¶ci
-rozwi±zywania problemów matematycznych w ³atwy i intuicyjny sposób.
+Kalamaris nale¿y do nowej generacji naukowych aplikacji. Podczas gdy
+jest podobny do Mathematica pod pewnymi wzglêdami - oferuje nowe
+mo¿liwo¶ci rozwi±zywania problemów matematycznych w ³atwy i intuicyjny
+sposób.
 
 %prep
 %setup -q
@@ -50,10 +54,10 @@ rozwi±zywania problemów matematycznych w ³atwy i intuicyjny sposób.
 
 %build
 %configure \
-    --with-qt-includes=/usr/X11R6/include/qt \
-    --with-qt-libraries=/usr/X11R6/lib \
-    --x-includes=/usr/X11R6/include/kde \
-    --with-extra-includes=/usr/X11R6/include
+	--with-qt-includes=%{_includedir}/qt \
+	--with-qt-libraries=%{_libdir} \
+	--x-includes=%{_includedir}/kde \
+	--with-extra-includes=%{_includedir}
     
 %{__make}
 
@@ -61,6 +65,8 @@ rozwi±zywania problemów matematycznych w ³atwy i intuicyjny sposób.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -70,8 +76,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Applications/kalamaris.desktop
 %{_datadir}/apps/kalamaris/*
 %attr(755,root,root) %{_bindir}/kalamaris
-%doc README
-%doc COPYING
+%doc README.gz
 
 %files examples
+%defattr(644,root,root,755)
 %doc kalamaris/examples/*
