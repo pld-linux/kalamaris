@@ -2,7 +2,7 @@ Summary:	Kalamaris - mathematical application for KDE
 Summary(pl):	Program matematyczny dla KDE
 Name:		kalamaris
 Version:	0.7.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Math
 Source0:	http://devel-home.kde.org/~larrosa/bin/%{name}-%{version}.tar.bz2
@@ -50,6 +50,7 @@ sposób.
 %build
 cp -f /usr/share/automake/config.* admin
 %configure \
+	KDEDIR=%{_libdir} \
 	--with-qt-includes=%{_includedir}/qt \
 	--with-qt-libraries=%{_libdir} \
 	--x-includes=%{_includedir}/kde \
