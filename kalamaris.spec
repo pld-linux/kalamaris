@@ -2,11 +2,12 @@ Summary:	Kalamaris - mathematical application for KDE
 Summary(pl):	Program matematyczny dla KDE
 Name:		kalamaris
 Version:	0.7.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Math
 Source0:	http://devel-home.kde.org/~larrosa/bin/%{name}-%{version}.tar.bz2
 # Source0-md5:	814c8c592dbf0ffe76b36ba157d8b2b4
+Patch0:		%{name}-desktop.patch
 URL:		http://devel-home.kde.org/~larrosa/kalamaris.html
 BuildRequires:	gmp-devel
 BuildRequires:	kdelibs-devel >= 3.0
@@ -43,9 +44,9 @@ sposób.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure \
 	--with-qt-includes=%{_includedir}/qt \
 	--with-qt-libraries=%{_libdir} \
@@ -58,11 +59,8 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics
-mv -f $RPM_BUILD_ROOT%{_datadir}/applnk/Office/kalamaris.desktop \
-	$RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics
+	DESTDIR=$RPM_BUILD_ROOT \
+	applnkdir=%{_desktopdir}
 
 %find_lang %{name} --with-kde
 
@@ -73,8 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/kalamaris
-%{_applnkdir}/Scientific/Mathematics/*.desktop
 %{_datadir}/apps/kalamaris
+%{_desktopdir}/*.desktop
 
 %files examples
 %defattr(644,root,root,755)
