@@ -67,7 +67,7 @@ install -D $RPM_BUILD_ROOT%{_datadir}/applnk/Office/kalamaris.desktop $RPM_BUILD
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -n %{name}.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/kalamaris
