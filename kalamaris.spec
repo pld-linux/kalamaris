@@ -5,8 +5,6 @@ Version:	0.6.0
 Release:	1
 License:	GPL
 Group:		Applications/Math
-Group(de):	Applikationen/Mathematik
-Group(pl):	Aplikacje/Matematyczne
 Source0:	http://perso.wanadoo.es/antlarr/bin/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-unlink.patch
 Patch1:		%{name}-make.patch
@@ -32,8 +30,6 @@ sposób.
 Summary:	Kalamaris - examples
 Summary(pl):	Kalamaris - przyklady
 Group:		Applications/Math
-Group(de):	Applikationen/Mathematik
-Group(pl):	Aplikacje/Matematyczne
 
 %description examples
 Kalamaris is the next generation scientific applications. While
