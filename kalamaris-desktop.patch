@@ -1,0 +1,25 @@
+--- kalamaris/kalamaris/kalamaris.desktop.orig	Thu Apr 26 19:16:54 2001
++++ kalamaris/kalamaris/kalamaris.desktop	Thu Jul 15 10:49:27 2004
+@@ -1,16 +1,19 @@
+ [Desktop Entry]
++Encoding=UTF-8
+ BinaryPattern=kalamaris;
+ Name=Kalamaris
+ Name[es]=Kalamaris
+ Protocols=file;
+ MimeType=;
+ Comment=Mathematics Research Framework
+-Comment[es]=Entorno de Investigaci�n Matem�tica
++Comment[es]=Entorno de Investigación Matemática
++Comment[pl]=Środowisko do badań matematycznych
+ Exec=kalamaris
+ Icon=kalamaris
+ TerminalOptions=
+ Path=
+ DocPath=kalamaris/index.html
+ Type=Application
+-Terminal=0
+-
++Terminal=false
++Categories=Qt;KDE;Science;Math;
++# vi: encoding=utf-8
