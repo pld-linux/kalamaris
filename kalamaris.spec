@@ -61,6 +61,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics
+
+mv -f $RPM_BUILD_ROOT%{_applnkdir}/Applications/kalamaris.desktop $RPM_BUILD_ROOT%{_applnkdir}/Scientific/Mathematics/%{name}.desktop
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -68,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/kalamaris
-%{_applnkdir}/Applications/kalamaris.desktop
+%{_applnkdir}/Scientific/Mathematics/*
 %{_datadir}/apps/kalamaris
 
 %files examples
