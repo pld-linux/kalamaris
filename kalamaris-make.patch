@@ -1,0 +1,12 @@
+diff -Nur kalamaris-0.6.0.orig/kalamaris/Makefile.am kalamaris-0.6.0/kalamaris/Makefile.am
+--- kalamaris-0.6.0.orig/kalamaris/Makefile.am	Mon Jun  5 03:26:50 2000
++++ kalamaris-0.6.0/kalamaris/Makefile.am	Wed Nov  1 22:47:03 2000
+@@ -3,7 +3,7 @@
+ LDFLAGS	= $(all_libraries) $(KDE_RPATH)
+ LDADD = methods/libmethods.a functions/libfunctions.a internal/libinternal.a \
+ 	qtai/libqtai.a kgl/libkgl.a -lgmp $(LIB_KHTML) $(LIB_KIO) $(LIB_KDEUI) \
+-	$(LIB_KDECORE) $(LIB_KFILE) $(LIB_QT) -lqgl -lGL -lGLU -lXmu
++	$(LIB_KDECORE) $(LIB_KFILE) $(LIB_QT) -lGL -lGLU -lXmu
+ 
+ kalamaris_SOURCES = garbage.cpp map.cpp constant.cpp variable.cpp operator.cpp \
+ 	parameter.cpp matrix.cpp mapvararg.cpp mapinternal.cpp mextract.cpp \
