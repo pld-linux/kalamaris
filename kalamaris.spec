@@ -12,8 +12,6 @@ URL:		http://perso.wanadoo.es/antlarr/kalamaris.html
 BuildRequires:	kdelibs-devel >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Kalamaris is the next generation scientific applications. While
