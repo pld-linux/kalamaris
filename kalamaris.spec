@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Math
 Source0:	http://perso.wanadoo.es/antlarr/bin/%{name}-%{version}.tar.bz2
+# Source0-md5:	1e7204c1ae37669fccc575e72684ba96
 Patch0:		%{name}-unlink.patch
 Patch1:		%{name}-make.patch
 URL:		http://perso.wanadoo.es/antlarr/kalamaris.html
