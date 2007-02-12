@@ -1,5 +1,5 @@
 Summary:	Kalamaris - mathematical application for KDE
-Summary(pl):	Program matematyczny dla KDE
+Summary(pl.UTF-8):   Program matematyczny dla KDE
 Name:		kalamaris
 Version:	0.7.1
 Release:	3
@@ -21,15 +21,15 @@ Kalamaris is the next generation scientific applications. While
 similar to Mathematica in some aspects, it offers a new approach to
 solve mathematical problems in an easy and intuitive way.
 
-%description -l pl
-Kalamaris nale縴 do nowej generacji naukowych aplikacji. Podczas gdy
-jest podobny do Mathematica pod pewnymi wzgl阣ami - oferuje nowe
-mo縧iwo禼i rozwi眤ywania problem體 matematycznych w 砤twy i intuicyjny
-spos骲.
+%description -l pl.UTF-8
+Kalamaris nale偶y do nowej generacji naukowych aplikacji. Podczas gdy
+jest podobny do Mathematica pod pewnymi wzgl臋dami - oferuje nowe
+mo偶liwo艣ci rozwi膮zywania problem贸w matematycznych w 艂atwy i intuicyjny
+spos贸b.
 
 %package examples
 Summary:	Kalamaris - examples
-Summary(pl):	Kalamaris - przyklady
+Summary(pl.UTF-8):   Kalamaris - przyklady
 Group:		Applications/Math
 
 %description examples
@@ -37,11 +37,11 @@ Kalamaris is the next generation scientific applications. While
 similar to Mathematica in some aspects, it offers a new approach to
 solve mathematical problems in an easy and intuitive way.
 
-%description examples -l pl
-Kalamaris nale縴 do nowej generacji naukowych aplikacji. Podczas gdy
-jest podobny do Mathematica pod pewnymi wzgl阣ami - oferuje nowe
-mo縧iwo禼i rozwi眤ywania problem體 matematycznych w 砤twy i intuicyjny
-spos骲.
+%description examples -l pl.UTF-8
+Kalamaris nale偶y do nowej generacji naukowych aplikacji. Podczas gdy
+jest podobny do Mathematica pod pewnymi wzgl臋dami - oferuje nowe
+mo偶liwo艣ci rozwi膮zywania problem贸w matematycznych w 艂atwy i intuicyjny
+spos贸b.
 
 %prep
 %setup -q -n %{name}
