@@ -1,5 +1,5 @@
 Summary:	Kalamaris - mathematical application for KDE
-Summary(pl.UTF-8):   Program matematyczny dla KDE
+Summary(pl.UTF-8):	Program matematyczny dla KDE
 Name:		kalamaris
 Version:	0.7.1
 Release:	3
@@ -29,7 +29,7 @@ sposób.
 
 %package examples
 Summary:	Kalamaris - examples
-Summary(pl.UTF-8):   Kalamaris - przyklady
+Summary(pl.UTF-8):	Kalamaris - przyklady
 Group:		Applications/Math
 
 %description examples
