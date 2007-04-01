@@ -9,7 +9,6 @@ Source0:	http://devel-home.kde.org/~larrosa/bin/%{name}-%{version}.tar.bz2
 # Source0-md5:	67bc1ce5eb83fb8013fc2d8932348c5d
 Patch0:		%{name}-desktop.patch
 URL:		http://devel-home.kde.org/~larrosa/kalamaris.html
-BuildRequires:	automake
 BuildRequires:	gmp-devel
 BuildRequires:	kdelibs-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -48,7 +47,6 @@ sposób.
 %patch0 -p1
 
 %build
-cp -f /usr/share/automake/config.* admin
 %configure \
 	KDEDIR=%{_libdir} \
 	--with-qt-includes=%{_includedir}/qt \
