@@ -1,0 +1,11 @@
+--- kalamaris-0.7.2/kalamaris/kgl/kgluniverse.h.org	2008-11-16 12:20:27.991913637 +0100
++++ kalamaris-0.7.2/kalamaris/kgl/kgluniverse.h	2008-11-16 12:20:39.847329482 +0100
+@@ -41,7 +41,7 @@
+     virtual ~KGLUniverse();
+ 
+     void	lookTo(GLfloat x,GLfloat y, GLfloat z);
+-    void	moveViewPoint(GLfloat x, GLfloat y, GLfloat y);
++    void	moveViewPoint(GLfloat x, GLfloat y, GLfloat z);
+     virtual QSize sizeHint() const { return QSize(300,300); };
+ 
+     void 	rotatePointOfView(GLfloat x, GLfloat y);
