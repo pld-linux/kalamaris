@@ -2,7 +2,7 @@ Summary:	Kalamaris - mathematical application for KDE
 Summary(pl.UTF-8):	Program matematyczny dla KDE
 Name:		kalamaris
 Version:	0.7.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Math
 Source0:	http://devel-home.kde.org/~larrosa/bin/%{name}-%{version}.tar.bz2
